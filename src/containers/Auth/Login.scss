@@ -1,0 +1,113 @@
+.login-background {
+    background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    height    : 100vh;
+
+    .login-container {
+        margin       : auto;
+        max-width    : 500px;
+        min-width    : 300px;
+        max-height   : 700px;
+        width        : 30%;
+        height       : 75%;
+        border-radius: 20px;
+        background   : white;
+        position     : absolute;
+        top          : 0;
+        bottom       : 0;
+        right        : 0;
+        left         : 0;
+
+
+
+        .login-content {
+            display       : flex;
+            flex-direction: column;
+            align-items   : center;
+            padding       : 1.5rem;
+            max-width     : 100%;
+
+
+            .text-login {
+                text-align: center;
+                padding   : 2rem 0;
+                margin    : 0;
+                font-size : 2rem;
+            }
+
+            .showPassword {
+                font-size: 1.2rem;
+            }
+
+
+
+            .btn-login {
+                width        : 100%;
+                height       : 40px;
+                font-size    : 1.3rem;
+                color        : white;
+                font-weight  : 700;
+                border-radius: 25px;
+                border       : none;
+                cursor       : pointer;
+                background   : linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+            }
+
+            .forgot-password {
+                font-size: 1rem;
+
+            }
+
+            .text-center {
+                font-size: 1.3rem;
+            }
+
+            .social-login {
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+                margin-top     : 1rem;
+
+                i {
+                    margin: 0 0.3rem;
+                }
+
+
+                .google-icon {
+                    font-size: 3rem;
+                    display  : flex;
+                    color    : red;
+                    width    : 3rem;
+                    height   : 3rem;
+                }
+
+                .facebook-icon {
+                    display        : flex;
+                    font-size      : 1.5rem;
+                    color          : white;
+                    background     : blue;
+                    border-radius  : 70%;
+                    align-items    : center;
+                    justify-content: center;
+                    width          : 3rem;
+                    height         : 3rem;
+                }
+
+                .apple-icon {
+                    display        : flex;
+                    font-size      : 2rem;
+                    color          : grey;
+                    background     : rgb(202, 200, 200);
+                    border-radius  : 70%;
+                    align-items    : center;
+                    justify-content: center;
+                    width          : 3rem;
+                    height         : 3rem;
+                }
+            }
+        }
+    }
+
+
+
+
+}

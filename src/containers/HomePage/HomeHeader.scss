@@ -1,0 +1,198 @@
+.home-header-container {
+    height    : 60px;
+    width     : 100%;
+    padding   : 0 40px;
+    position  : sticky;
+    top       : 0;
+    background: white;
+    z-index   : 10000;
+
+
+    .home-header-content {
+        width  : 100%;
+        height : 100%;
+        display: flex;
+
+        .left-content {
+            width      : 20%;
+            display    : flex;
+            align-items: center;
+
+            i {
+
+                font-size    : 26px;
+                color        : grey;
+                cursor       : pointer;
+                padding-right: 20px;
+            }
+
+        }
+
+        .center-content {
+            width          : 55%;
+            display        : flex;
+            justify-content: space-between;
+            align-items    : center;
+
+        }
+
+        .right-content {
+            width          : 25%;
+            display        : flex;
+            justify-content: flex-end;
+            align-items    : center;
+
+            .support {
+                padding-right: 20px;
+                display      : flex;
+                align-items  : center;
+                cursor       : pointer;
+
+                i {
+                    font-size   : 15px;
+                    margin-right: 2px;
+                }
+            }
+
+            .language-en {
+                margin: 0 10px;
+                cursor: pointer;
+
+                &.active {
+                    span {
+                        color: orange;
+                    }
+
+                }
+            }
+
+            .language-vi {
+                margin: 0 10px;
+                cursor: pointer;
+
+                &.active {
+                    span {
+                        color: blue;
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}
+
+.home-header-banner {
+    background: url('../../assets/header-background-1600x580.jpg') center center no-repeat;
+
+    // width     : 1600px;
+    height        : 485px;
+    display       : flex;
+    flex-direction: column;
+
+    .content-up {
+        height          : 65%;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(255, 255, 255, 0.1));
+        padding-top     : 100px;
+
+        .title-1 {
+            text-align    : center;
+            color         : rgb(241, 228, 228);
+            font-size     : 32px;
+            text-shadow   : 1px 1px 1px #333;
+            margin-bottom : 15px;
+            text-transform: uppercase;
+            outline       : none;
+        }
+
+        .title-2 {
+            text-align    : center;
+            color         : rgb(241, 228, 228);
+            font-size     : 32px;
+            text-shadow   : 1px 1px 1px #333;
+            margin-bottom : 15px;
+            text-transform: uppercase;
+            outline       : none;
+        }
+
+        .search {
+            width           : fit-content;
+            margin          : 0 auto;
+            justify-content : center;
+            align-items     : center;
+            padding         : 10px;
+            border          : 1px soild transparent;
+            border-radius   : 25px;
+            background-color: #f7d800;
+            position        : flex;
+
+            i {
+                margin: 0 5px;
+            }
+
+            input {
+                height    : 30px;
+                width     : 370px;
+                background: transparent;
+                outline   : none;
+                border    : none;
+            }
+
+        }
+    }
+
+    .content-down {
+        height          : 35%;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+        padding-top     : 30px;
+        padding-bottom  : 20px;
+        display         : flex;
+        align-items     : flex-end;
+        justify-content : center;
+
+        .option {
+
+            text-align: center;
+            display   : flex;
+            grid-gap  : 50px;
+
+
+
+            .option-child {
+                width: 125px;
+
+                .icon-child {
+                    width          : 65px;
+                    height         : 65px;
+                    border-radius  : 50%;
+                    padding        : 10px;
+                    margin         : 0 auto;
+                    background     : white;
+                    justify-content: center;
+                    align-items    : center;
+                    display        : flex;
+
+                    i {
+                        font-size: 20px;
+                        color    : #49bce2;
+                    }
+                }
+
+                .text-child {
+                    font-size  : 17px;
+                    font-weight: 500;
+                    cursor     : pointer;
+
+                    &:hover {
+                        color: #49bce2;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+}

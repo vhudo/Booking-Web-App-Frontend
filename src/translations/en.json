@@ -1,0 +1,103 @@
+{
+
+    "homeheader":{
+        "specialty": "Specialties",
+        "search-provider": "Find a Provider",
+        "location": "Locations",
+        "services": "Our services",
+        "support": "Support",
+        "welcome": "Welcome, ",
+        "title-1": "Meet With an Doctor",
+        "title-2": "Who Take Your Insurance"
+       
+    },
+
+    "homebanner":{
+        "specialty": "Specialties",
+        "tele-health": "Tele Health",
+        "mental-health": "Mental Health",
+        "dental": "Dental"
+    },
+
+    "menu": {
+        "system": {
+            "header": "System",
+            "system-administrator": {
+                "header": "System Administrator",
+                "user-manage": "User manage",
+                "user-redux": "User manage redux",
+                "register-package-group-or-account": "Register service package for group/account"
+            },
+            "system-parameter": {
+                "header": "System-parameter"
+            }
+        },
+        "admin":{
+            "manage-user": "User",
+            "manage-doctor": "Doctor management",
+            "manage-admin": "Admin management",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD user redux",
+            "clinic": "Clinic",
+            "manage-clinic": "Clinic management",
+            "specialty": "Specialty",
+            "manage-specialty": "Specialty management",
+            "posts": "Posts",
+            "manage-posts": "Posts management"
+        },
+        "doctor":{
+            "manage-schedule": "Schedule management",
+            "choose-doctor": "Choose Doctor",
+        "choose-date": "Choose Date",
+        "save": "Save"
+        }
+        
+    },
+
+    "manage-user":{
+        "title": "Create New",
+        "add": "Add",
+        "email": "Email",
+        "password": "Password",
+        "first-name": "First Name",
+        "last-name": "Last Name",
+        "phone-number": "Phone Number",
+        "address": "Address",
+        "gender": "Gender",
+        "role": "Role",
+        "position": "Degree",
+        "image": "Avatar",
+        "save": "Save",
+        "edit": "Save changes"
+    },
+
+    "manage-schedule":{
+        "title": "Doctor's Schedule Management",
+        "choose-doctor": "Choose Doctor",
+        "choose-date": "Choose Date",
+        "save": "Save"
+    },
+    "patient":{
+        "detail-doctor":{
+            "schedule": "Schedule",
+            "no-schedule": "Not Available Time",
+            "choose": "Choose ",
+            "book-free": " and book"
+        }
+    },
+    "admin":{
+        "manage-doctor":{
+            "title": "Create Information's Doctor",
+            "select-doctor": "Select Doctor",
+            "information": "About",
+            "save": "Save",
+            "edit": "Save changes",
+            "state": "State",
+            "payment": "Payment Method",
+            "note": "Note",
+            "clinic": "Clinic",
+            "address-clinic": "Address"
+        }
+    }
+   
+}

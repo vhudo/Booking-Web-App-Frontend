@@ -1,0 +1,31 @@
+.m-s-container {
+    .m-s-title {
+        text-transform: uppercase;
+        margin        : 15px 0px 15px 0px;
+        font-size     : 17px;
+        font-weight   : 600;
+        text-align    : center;
+    }
+
+    .pick-hour {
+        padding      : 20px 0 20px 0;
+        flex-wrap    : wrap;
+        gap          : 20px;
+        display      : flex;
+        border-top   : 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+
+        button {
+            padding: 5px 15px;
+            border : 1px solid grey;
+        }
+
+        .btn-schedule {
+
+            &.active {
+                background-color: orange;
+            }
+        }
+    }
+}
