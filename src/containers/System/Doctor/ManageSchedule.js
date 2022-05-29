@@ -33,7 +33,7 @@ class ManageSchedule extends Component {
                 let object = {};
                 let labelEn = `${item.firstName} ${item.lastName}`;
                 let labelVi = `${item.lastName} ${item.firstName}`;
-                object.label = language === LANGUAGES.VI ? labelVi : labelEn;
+                object.label = language === LANGUAGES.EN ? labelEn : labelVi;
                 object.value = item.id;
                 result.push(object);
             });

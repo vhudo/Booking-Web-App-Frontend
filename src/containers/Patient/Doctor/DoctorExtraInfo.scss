@@ -1,3 +1,34 @@
 .doctor-extra-info-container {
-    margin: 0 100px;
+    padding-left: 15px;
+
+    .title-payment {
+        text-transform: uppercase;
+        color         : #333;
+        padding       : 5px 0;
+    }
+
+    .payment {
+        font-weight: 600;
+        color      : #333;
+    }
+
+    .up {
+        .text-address {
+            text-transform: uppercase;
+            color         : #333
+        }
+
+        .name-clinic {
+            font-weight: 600;
+            color      : #333;
+            padding    : 5px 0;
+
+        }
+
+        .detail-address {
+            font-weight: 600;
+            color      : #333;
+        }
+
+    }
 }

@@ -84,6 +84,22 @@
             "no-schedule": "Bác sĩ không có hẹn trong thời gian này",
             "choose": "Chọn ",
             "book-free": " và đặt"
+        },
+        "extra-info-doctor":{
+            "text-address": "Địa chỉ khám",
+            "detail": "Xem chi tiết",
+            "payment": "Người bệnh có thể thanh toán bằng "
+        },
+        "booking-modal":{
+            "title": "Thông tin đặt lịch khám bệnh",
+            "name": "Họ và Tên",
+            "phoneNumber": "Số điện thoại",
+            "email": "Địa chỉ email",
+            "gender": "Giới tính",
+            "btnConfirm": "Xác nhận",
+            "btnCancel": "Hủy",
+            "DOB": "Ngày tháng năm sinh",
+            "reason": "Lý do Khám"
         }
     },
     "admin":{

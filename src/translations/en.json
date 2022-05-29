@@ -83,6 +83,23 @@
             "no-schedule": "Not Available Time",
             "choose": "Choose ",
             "book-free": " and book"
+        },
+        "extra-info-doctor":{
+            "text-address": "Office Location",
+            "detail": "More Details",
+            "text-payment": "Payment",
+            "payment": "We accept "
+        },
+        "booking-modal":{
+            "title": "Tell us a bit about you",
+            "name": "name",
+            "phoneNumber": "phone",
+            "email": "Email",
+            "gender": "Sex assigned at birth",
+            "btnConfirm": "Confirm",
+            "btnCancel": "Cancel",
+            "DOB": "Date of Birth",
+            "reason": "What's the reason for your visit?"
         }
     },
     "admin":{
