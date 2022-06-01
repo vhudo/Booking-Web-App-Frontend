@@ -146,7 +146,6 @@ class UserRedux extends Component {
                 positionId: this.state.position,
                 avatar: this.state.avatar
             })
-            console.log(this.state.avatar)
         }
 
     };
@@ -155,7 +154,7 @@ class UserRedux extends Component {
         let isValid = true
         let arrCheck = ['email', 'password', 'firstName', 'lastName',
             'phoneNumber', 'address', 'gender', 'role', 'position']
-        console.log(this.state)
+        // console.log(this.state)
         for (let i = 0; i < arrCheck.length; i++) {
             if (!this.state[arrCheck[i]]) {
                 isValid = false

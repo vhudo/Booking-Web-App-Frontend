@@ -78,6 +78,10 @@
         "choose-date": "Chọn ngày",
         "save": "Lưu"
     },
+    "homepage":{
+        "more-info": "Xem thêm",
+        "specialty-top": "Chuyên khoa phổ biến"
+    },
     "patient":{
         "detail-doctor":{
             "schedule": "Lịch Khám",
@@ -113,7 +117,9 @@
             "payment": "Phương thức thanh toán",
             "note": "Ghi chú",
             "clinic": "Phòng khám",
-            "address-clinic": "Địa chỉ"
+            "address-clinic": "Địa chỉ",
+            "select-specialty":"Chọn Chuyên Khoa",
+            "select-clinic": "Chọn phòng khám"
         }
     }
 

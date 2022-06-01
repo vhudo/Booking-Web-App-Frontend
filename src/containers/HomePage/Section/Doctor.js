@@ -27,13 +27,6 @@ class Doctor extends Component {
         }
     }
 
-    handelViewDetailDoctor = (doctor) => {
-        // console.log('check view information', doctor)
-
-        // if (this.props.history) {
-        //     this.props.history.push(`/detail-doctor/${doctor.id}`)
-        // }
-    };
     render() {
         // console.log('check props dortor top', this.props.topDoctors)
         let { arrDoctors, language } = this.state;
@@ -59,7 +52,7 @@ class Doctor extends Component {
                                     let nameEn = `${item.firstName} ${item.lastName}, ${item.positionData.valueEn}`;
                                     let nameVi = `${item.lastName} ${item.firstName}, ${item.positionData.valueVi}`;
                                     return (
-                                        <div className="section-customize" key={index} onClick={() => this.handelViewDetailDoctor(item)}>
+                                        <div className="section-customize" key={index}>
                                             <Link to={`/detail-doctor/${item.id}`}>
                                                 <div className="border-customize">
 

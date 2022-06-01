@@ -5,7 +5,7 @@ import './HomePage.scss';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import HomeHeader from './HomeHeader';
-import Speciality from './Section/Speciality';
+import Specialty from './Section/Specialty';
 import Location from './Section/Location'
 import Doctor from './Section/Doctor';
 import Posts from './Section/Posts';
@@ -25,7 +25,7 @@ class HomePage extends Component {
         return (
             <div>
                 <HomeHeader isShowBanner={true} />
-                <Speciality settings={settings} />
+                <Specialty settings={settings} />
                 <Location settings={settings} ></Location>
                 <Doctor settings={settings} />
                 <Posts settings={settings} />

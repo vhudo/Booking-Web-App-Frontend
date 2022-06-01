@@ -70,7 +70,10 @@
         "save": "Save",
         "edit": "Save changes"
     },
-
+    "homepage":{
+        "more-info": "More",
+        "specialty-top": "Top-searched specialties"
+    },
     "manage-schedule":{
         "title": "Doctor's Schedule Management",
         "choose-doctor": "Choose Doctor",
@@ -113,7 +116,9 @@
             "payment": "Payment Method",
             "note": "Note",
             "clinic": "Clinic",
-            "address-clinic": "Address"
+            "address-clinic": "Address",
+            "select-specialty":"Select Specialty",
+            "select-clinic": "Select Clinic"
         }
     }
    

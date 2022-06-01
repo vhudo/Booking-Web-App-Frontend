@@ -11,6 +11,7 @@ import { LANGUAGES } from "../../../../utils";
 import DatePicker from '../../../../components/Input/DatePicker';
 import { toast } from 'react-toastify';
 import { postBookAppointment } from '../../../../services/userService';
+import moment from 'moment';
 
 
 
@@ -89,8 +90,35 @@ class BookingModal extends Component {
         this.setState({ selectedGender: selectedOption })
     }
 
+    buildTimeBooking = (dataTime) => {
+        let { language } = this.props
+
+        if (dataTime && !_.isEmpty(dataTime)) {
+            let time = language === LANGUAGES.EN ? dataTime.timeTypeData.valueEn : dataTime.timeTypeData.valueVi
+            let date = language === LANGUAGES.EN ?
+                moment.unix(+dataTime.date / 1000).locale('en').format('ddd,MM/DD')
+                : moment.unix(+dataTime.date / 1000).format('dddd,DD/MM')
+            return `${date} at ${time}`
+        }
+        return <></>
+    }
+
+    buildDoctorName = (dataTime) => {
+        let { language } = this.props
+        if (dataTime && !_.isEmpty(dataTime)) {
+            let name = language === LANGUAGES.EN ? `${dataTime.doctorData.firstName} ${dataTime.doctorData.lastName}`
+                : `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`
+            return name
+        }
+        return <></>
+    }
+
     handleConfirmBooking = async () => {
-        let date = new Date(this.state.DOB).setHours(0, 0, 0, 0)
+        let date = new Date(this.state.DOB).getTime()
+        let timeString = this.buildTimeBooking(this.props.dataTime)
+        let doctorName = this.buildDoctorName(this.props.dataTime)
+        let nameClinic = this.props.dataTime.doctorData.Doctor_Info.nameClinic
+        let addressClinic = this.props.dataTime.doctorData.Doctor_Info.addressClinic
         let res = await postBookAppointment({
             name: this.state.name,
             email: this.state.email,
@@ -99,7 +127,12 @@ class BookingModal extends Component {
             date: date,
             doctorId: this.state.doctorId,
             selectedgender: this.state.selectedGender.value,
-            timeType: this.state.timeType
+            timeType: this.state.timeType,
+            language: this.props.language,
+            timeString: timeString,
+            doctorName: doctorName,
+            nameClinic: nameClinic,
+            addressClinic: addressClinic
         })
         if (res && res.errCode === 0) {
             toast.success("Booking a new appointment succeed")
@@ -208,8 +241,6 @@ class BookingModal extends Component {
                     </div>
                 </div>
             </Modal>
-
-
         )
     }
 }

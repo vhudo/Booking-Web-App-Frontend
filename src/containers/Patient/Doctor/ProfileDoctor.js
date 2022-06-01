@@ -17,7 +17,6 @@ class ProfileDoctor extends Component {
 
     async componentDidMount() {
         let data = await this.getInfoDoctor(this.props.doctorId)
-        console.log(data)
         this.setState({
             dataProfile: data
         })
@@ -42,7 +41,6 @@ class ProfileDoctor extends Component {
 
     renderTimeBooking = (dataTime) => {
         let { language } = this.props
-        let { dataProfile } = this.state
 
         if (dataTime && !_.isEmpty(dataTime)) {
             let time = language === LANGUAGES.EN ? dataTime.timeTypeData.valueEn : dataTime.timeTypeData.valueVi
@@ -66,7 +64,7 @@ class ProfileDoctor extends Component {
             nameEn = `${dataProfile.firstName} ${dataProfile.lastName}, ${dataProfile.positionData.valueEn}`
             nameVi = `${dataProfile.lastName} ${dataProfile.firstName}, ${dataProfile.positionData.valueVi}`
         }
-        console.log(dataProfile)
+        // console.log(dataProfile)
         return (
 
             <div className='profile-doctor-container'>

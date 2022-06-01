@@ -128,7 +128,6 @@ class ManageSchedule extends Component {
             toast.error("Save Fail!")
             console.log('error', res)
         }
-        console.log('result schedule', result)
     }
     render() {
         let { scheduleTime } = this.state

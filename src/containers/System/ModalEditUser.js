@@ -35,7 +35,7 @@ class ModalEditUser extends Component {
                 address: user.address,
             })
         }
-        console.log('didmount editmodal', this.props.currentUser)
+        // console.log('didmount editmodal', this.props.currentUser)
 
     }
 
