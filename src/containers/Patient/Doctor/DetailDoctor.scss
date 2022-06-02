@@ -5,7 +5,7 @@
         margin : 0 100px;
         display: flex;
 
-        .content-left {
+        .left {
             width: 30%;
 
             background   : center center no-repeat;
@@ -15,7 +15,7 @@
             margin       : 10px 20px;
         }
 
-        .content-right {
+        .right {
             width            : 70%;
             display          : flex;
             flex-direction   : column;
@@ -40,11 +40,11 @@
         min-height: 200px;
         padding   : 10px 0;
 
-        .content-left {
+        .left {
             width: 50%;
         }
 
-        .content-right {
+        .right {
             width: 50%;
         }
     }

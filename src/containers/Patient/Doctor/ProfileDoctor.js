@@ -6,6 +6,7 @@ import { getProfileDortorById } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import _ from 'lodash'
 import moment from 'moment';
+import { Link } from 'react-router-dom'
 
 class ProfileDoctor extends Component {
     constructor(props) {
@@ -58,7 +59,7 @@ class ProfileDoctor extends Component {
 
     render() {
         let { dataProfile } = this.state
-        let { language, isShowAboutDoctor, dataTime } = this.props
+        let { language, isShowAboutDoctor, dataTime, isShowLinkDetail, doctorId } = this.props
         let nameEn = '', nameVi = ''
         if (dataProfile && dataProfile.positionData) {
             nameEn = `${dataProfile.firstName} ${dataProfile.lastName}, ${dataProfile.positionData.valueEn}`
@@ -66,8 +67,7 @@ class ProfileDoctor extends Component {
         }
         // console.log(dataProfile)
         return (
-
-            <div className='profile-doctor-container'>
+            < div className='profile-doctor-container' >
                 <div className='intro'>
                     <div className='left' style={{
                         backgroundImage: `url(${dataProfile && dataProfile.image ? dataProfile.image : ''})`
@@ -95,7 +95,12 @@ class ProfileDoctor extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+                {isShowLinkDetail === true &&
+                    <div className='view-detail-doctor'>
+                        <Link to={`/detail-doctor/${doctorId}`}>More</Link>
+                    </div>
+                }
+            </div >
         )
     }
 }

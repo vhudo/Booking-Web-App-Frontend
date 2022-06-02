@@ -9,7 +9,6 @@ import "react-markdown-editor-lite/lib/index.css";
 import Select from "react-select";
 import { CRUD_ACTIONS, LANGUAGES } from "../../../utils";
 import { getDetailDoctorService } from "../../../services/userService";
-import Specialty from "../../HomePage/Section/Specialty";
 
 // Initialize a markdown parser
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -36,6 +35,8 @@ class ManageDoctor extends Component {
       nameClinic: "",
       addressClinic: "",
       note: "",
+      clinicId: "",
+      specialtyId: ""
     };
   }
 
@@ -68,8 +69,15 @@ class ManageDoctor extends Component {
           result.push(object);
         })
       }
-
       if (type === 'SPECIALTY') {
+        inputData.map((item, index) => {
+          let object = {};
+          object.label = item.name;
+          object.value = item.id;
+          result.push(object);
+        })
+      }
+      if (type === 'CLINIC') {
         inputData.map((item, index) => {
           let object = {};
           object.label = item.name;
@@ -93,23 +101,27 @@ class ManageDoctor extends Component {
       let dataSelect = this.buildDataSelect(this.props.allDoctors, 'USERS');
       let dataPayment = this.buildDataSelect(this.props.allRequiredInfoDoctor.resPayment, 'PAYMENT')
       let dataSpecialty = this.buildDataSelect(this.props.allRequiredInfoDoctor.resSpecialty, 'SPECIALTY')
+      let dataClinic = this.buildDataSelect(this.props.allRequiredInfoDoctor.resSpecialty, 'CLINIC')
       this.setState({
         arrDoctors: dataSelect,
         arrPayments: dataPayment,
-        arrSpecialty: dataSpecialty
+        arrSpecialty: dataSpecialty,
+        arrClinic: dataClinic,
       });
     }
 
     if (prevProps.allRequiredInfoDoctor !== this.props.allRequiredInfoDoctor) {
-      let { resState, resPayment, resSpecialty } = this.props.allRequiredInfoDoctor
+      let { resState, resPayment, resSpecialty, resClinic } = this.props.allRequiredInfoDoctor
       let dataState = this.buildDataSelect(resState, 'STATE')
       let dataPayment = this.buildDataSelect(resPayment, 'PAYMENT')
       let dataSpecialty = this.buildDataSelect(resSpecialty, 'SPECIALTY')
-      // console.log('all required information: ', dataState, dataPayment)
+      let dataClinic = this.buildDataSelect(resClinic, 'CLINIC')
+      // console.log('all required information: ', dataState,dataPayment ,dataSpecialty,dataClinic)
       this.setState({
         arrPayments: dataPayment,
         arrState: dataState,
-        arrSpecialty: dataSpecialty
+        arrSpecialty: dataSpecialty,
+        arrClinic: dataClinic,
       });
     }
   }
@@ -129,16 +141,15 @@ class ManageDoctor extends Component {
       description: this.state.description,
       doctorId: this.state.selectedDoctor.value,
       action: hasData === true ? CRUD_ACTIONS.EDIT : CRUD_ACTIONS.CREATE,
-
       selectedPayment: this.state.selectedPayment.value,
       selectedState: this.state.selectedState.value,
       selectedSpecialty: this.state.selectedSpecialty.value,
+      selectedClinic: this.state.selectedClinic.value,
       nameClinic: this.state.nameClinic,
       addressClinic: this.state.addressClinic,
       note: this.state.note,
       clinicId: this.state.selectedClinic && this.state.selectedClinic.value ? this.state.selectedClinic.value : '',
-      SpecialtyId: this.state.selectedSpecialty.value
-
+      specialtyId: this.state.selectedSpecialty.value,
     });
   };
 
@@ -158,20 +169,31 @@ class ManageDoctor extends Component {
     this.setState({ selectedDoctor }, () => {
       //   console.log(`Doctor selected:`, this.state.selectedDoctor);
     });
-    let { arrPayments, arrState, arrSpecialty } = this.state
+    let { arrPayments, arrState, arrSpecialty, arrClinic } = this.state
     let res = await getDetailDoctorService(selectedDoctor.value)
     if (res && res.errCode === 0 && res.data && res.data.Markdown && res.data.Doctor_Info) {
       let markdown = res.data.Markdown
       let Doctor_Info = res.data.Doctor_Info
+
       this.setState({
         contentHTML: markdown.contentHTML,
         contentMarkdown: markdown.contentMarkdown,
         description: markdown.description,
-        nameClinic: Doctor_Info.nameClinic,
+
         addressClinic: Doctor_Info.addressClinic,
+        nameClinic: Doctor_Info.nameClinic,
         note: Doctor_Info.note,
+        paymentId: Doctor_Info.paymentId,
+        stateId: Doctor_Info.stateId,
+        specialtyId: Doctor_Info.specialtyId,
+        clinicId: Doctor_Info.clinicId,
+
+
         selectedPayment: this.findItem(arrPayments, Doctor_Info.paymentId),
         selectedState: this.findItem(arrState, Doctor_Info.stateId),
+        selectedSpecialty: this.findItem(arrSpecialty, Doctor_Info.specialtyId),
+        selectedClinic: this.findItem(arrClinic, Doctor_Info.clinicId),
+
         hasData: true,
       })
     } else {
@@ -184,6 +206,8 @@ class ManageDoctor extends Component {
         note: '',
         selectedPayment: '',
         selectedState: '',
+        selectedSpecialty: '',
+        selectedClinic: '',
         hasData: false
       })
     }
@@ -208,7 +232,7 @@ class ManageDoctor extends Component {
           <FormattedMessage id="admin.manage-doctor.title" />
         </div>
         <div className="more-info">
-          <div className="content-left form-group">
+          <div className="left form-group">
             <label><FormattedMessage id="admin.manage-doctor.select-doctor" /> </label>
             <Select
               placeholder={<FormattedMessage id="admin.manage-doctor.select-doctor" />}
@@ -217,7 +241,7 @@ class ManageDoctor extends Component {
               options={this.state.arrDoctors}
             />
           </div>
-          <div className="content-right">
+          <div className="right">
             <label> <FormattedMessage id="admin.manage-doctor.information" /> </label>
             <textarea
               className="form-control"
@@ -278,7 +302,7 @@ class ManageDoctor extends Component {
               options={this.state.arrSpecialty}
               placeholder={<FormattedMessage id="admin.manage-doctor.select-specialty" />}
               onChange={this.handleChangeSelectInfoDoctor}
-              name='selectedSpecialty'
+              name={'selectedSpecialty'}
             >
             </Select>
           </div>
@@ -289,7 +313,7 @@ class ManageDoctor extends Component {
               options={this.state.arrClinic}
               placeholder={<FormattedMessage id="admin.manage-doctor.select-clinic" />}
               onChange={this.handleChangeSelectInfoDoctor}
-              name='selectedClinic'
+              name={'selectedClinic'}
             >
             </Select>
           </div>

@@ -1,0 +1,12 @@
+.location-child {
+    cursor: pointer;
+
+    .location-name {
+        padding: 10px 0;
+        color  : #333;
+
+        &:hover {
+            color: #45c3d2
+        }
+    }
+}

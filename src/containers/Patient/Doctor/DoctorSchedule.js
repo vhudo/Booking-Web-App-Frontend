@@ -25,6 +25,12 @@ class DoctorSchedule extends Component {
         // console.log(moment(new Date()).format('dddd - DD/MM'))
         // console.log(moment(new Date()).locale('en').format('ddd - MM/DD'))
         let arrDays = this.getArrDays(language)
+        if (this.props.doctorId) {
+            let res = await getscheduleDoctorByDate(this.props.doctorId, arrDays[0].value)
+            this.setState({
+                allAvailabelTime: res.data ? res.data : []
+            })
+        }
         this.setState({
             allDays: arrDays
         })

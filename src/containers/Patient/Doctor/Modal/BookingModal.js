@@ -117,8 +117,8 @@ class BookingModal extends Component {
         let date = new Date(this.state.DOB).getTime()
         let timeString = this.buildTimeBooking(this.props.dataTime)
         let doctorName = this.buildDoctorName(this.props.dataTime)
-        let nameClinic = this.props.dataTime.doctorData.Doctor_Info.nameClinic
-        let addressClinic = this.props.dataTime.doctorData.Doctor_Info.addressClinic
+        // let nameClinic = this.props.dataTime.doctorData.Doctor_Info.nameClinic
+        // let addressClinic = this.props.dataTime.doctorData.Doctor_Info.addressClinic
         let res = await postBookAppointment({
             name: this.state.name,
             email: this.state.email,
@@ -131,8 +131,8 @@ class BookingModal extends Component {
             language: this.props.language,
             timeString: timeString,
             doctorName: doctorName,
-            nameClinic: nameClinic,
-            addressClinic: addressClinic
+            // nameClinic: nameClinic,
+            // addressClinic: addressClinic
         })
         if (res && res.errCode === 0) {
             toast.success("Booking a new appointment succeed")
@@ -173,6 +173,7 @@ class BookingModal extends Component {
                                 doctorId={doctorId}
                                 isShowAboutDoctor={false}
                                 dataTime={dataTime}
+                                isShowLinkDetail={false}
                             />
                         </div>
                         <div className='row'>

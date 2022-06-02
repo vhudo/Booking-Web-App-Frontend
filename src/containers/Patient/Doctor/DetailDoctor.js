@@ -47,11 +47,11 @@ class DetailDoctor extends Component {
                 <div className='doctor-detail-container'>
                     <div className='intro'>
                         <div
-                            className='content-left'
+                            className='left'
                             style={{
                                 backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})`
                             }}></div>
-                        <div className='content-right'>
+                        <div className='right'>
                             <div className='up'>
                                 {language === LANGUAGES.VI ? nameVi : nameEn}
                             </div>
@@ -63,10 +63,10 @@ class DetailDoctor extends Component {
                         </div>
                     </div>
                     <div className='schedule'>
-                        <div className='content-left'>
+                        <div className='left'>
                             <DoctorSchedule doctorId={this.state.currentDoctorId} />
                         </div>
-                        <div className='content-right'>
+                        <div className='right'>
                             <DoctorExtraInfo doctorId={this.state.currentDoctorId} />
                         </div>
                     </div>
