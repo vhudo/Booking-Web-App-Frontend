@@ -117,7 +117,6 @@ const appReducer = (state = initialState, action) => {
       };
 
     //top doctor
-
     case actionTypes.FETCH_TOP_DOCTOR_REQUEST:
       // console.log("fire fetch user request: ", action);
       state.topDoctors = action.data;

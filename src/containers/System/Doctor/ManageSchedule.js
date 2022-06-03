@@ -4,7 +4,7 @@ import './ManageSchedule.scss'
 import { FormattedMessage } from 'react-intl';
 import Select from "react-select";
 import * as actions from "../../../store/actions";
-import { LANGUAGES } from "../../../utils";
+import { LANGUAGES, USER_ROLE } from "../../../utils";
 import DatePicker from '../../../components/Input/DatePicker';
 import { toast } from 'react-toastify';
 import _ from 'lodash';
@@ -17,13 +17,28 @@ class ManageSchedule extends Component {
             arrDoctors: [],
             selectedDoctor: "",
             currentDate: new Date(),
-            scheduleTime: []
+            scheduleTime: [],
+            isShowSelectDoctor: false
         };
     }
 
     componentDidMount() {
         this.props.fetchAllDoctors();
         this.props.fetchAllScheduleTime();
+        let { userInfo } = this.props
+        if (userInfo && !_.isEmpty(userInfo)) {
+            let role = userInfo.roleId
+            if (role === USER_ROLE.ADMIN) {
+                this.setState({
+                    isShowSelectDoctor: true
+                })
+            }
+            if (role === USER_ROLE.DOCTOR) {
+                this.setState({
+                    isShowSelectDoctor: false
+                })
+            }
+        }
     }
     buildDataSelect = (inputData) => {
         let result = [];
@@ -130,7 +145,7 @@ class ManageSchedule extends Component {
         }
     }
     render() {
-        let { scheduleTime } = this.state
+        let { scheduleTime, isShowSelectDoctor } = this.state
         let { language } = this.props
         // console.log('check state', this.state)
         // console.log('check props', this.props)
@@ -141,14 +156,19 @@ class ManageSchedule extends Component {
                 </div>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-4 form-group'>
-                            <label><FormattedMessage id="manage-schedule.choose-doctor" /></label>
-                            <Select
-                                value={this.state.selectedDoctor}
-                                onChange={this.handleChangeSelect}
-                                options={this.state.arrDoctors}
-                            />
-                        </div>
+                        {isShowSelectDoctor && isShowSelectDoctor === true ?
+                            <div className='col-4 form-group'>
+                                <label><FormattedMessage id="manage-schedule.choose-doctor" /></label>
+                                <Select
+                                    value={this.state.selectedDoctor}
+                                    onChange={this.handleChangeSelect}
+                                    options={this.state.arrDoctors}
+                                />
+                            </div>
+                            :
+                            <div></div>
+                        }
+
                         <div className='col-4 form-group'>
                             <label><FormattedMessage id="manage-schedule.choose-date" /></label>
                             <DatePicker
@@ -195,6 +215,7 @@ const mapStateToProps = state => {
         allDoctors: state.user.allDoctors,
         language: state.app.language,
         allScheduleTime: state.user.scheduleTime,
+        userInfo: state.user.userInfo
     };
 };
 

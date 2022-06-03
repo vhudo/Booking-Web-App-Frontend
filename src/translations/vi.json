@@ -50,7 +50,8 @@
             "manage-schedule": "Quản lý lịch khám bệnh",
             "choose-doctor": "Chọn bác sĩ",
             "choose-date": "Chọn ngày",
-            "save": "Lưu"
+            "save": "Lưu",
+            "manage-patient": "Quản lý bệnh Nhan"
         }
         
     },
@@ -77,6 +78,18 @@
         "choose-doctor": "Chọn bác sĩ",
         "choose-date": "Chọn ngày",
         "save": "Lưu"
+    },
+    "manage-patient":{
+        "title": "Quản lí bệnh nhân",
+        "choose-date": "Chọn Ngày",
+        "confirm": "Xác nhận",
+        "no-data": "Không có dữ liệu",
+        "time": "Thời gian",
+        "firstName": "Tên",
+        "lastName": "Họ",
+        "address": "Địa chỉ",
+        "gender":"Giới tính",
+        "action": "Hành động"
     },
     "homepage":{
         "more-info": "Xem thêm",

@@ -1,0 +1,41 @@
+.home-footer-container {
+    overflow  : hidden;
+    padding   : 8px;
+    background: #222228;
+    color     : #999;
+    text-align: left;
+
+    .home-footer-content {
+        max-width: 1200px;
+        margin   : 0 auto;
+
+        .footer-menu-list {
+            float       : left;
+            min-width   : 200px;
+            margin-right: 10px;
+
+            h5 {
+                color        : #FFF;
+                font-size    : 1.8em;
+                margin-bottom: 0;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: unset;
+            }
+        }
+
+        .foot-cr {
+            border-top : solid 1px #333;
+            float      : none;
+            clear      : both;
+            font-size  : 15px;
+            padding-top: 10px;
+            text-align : center;
+        }
+    }
+}

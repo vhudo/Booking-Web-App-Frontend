@@ -101,7 +101,7 @@ class Login extends Component {
                                 onChange={(e) => this.handleOnChangeUsername(e)}
                             />
                         </div>
-                        <div className='col-12 form-group login-input mt-2'>
+                        <div className='col-12 form-group login-input'>
                             <label>Password</label>
                             <input
                                 type={this.state.isShowPassword ? 'text' : 'password'}
@@ -118,7 +118,7 @@ class Login extends Component {
                             {this.state.errMessage}
                         </div>
 
-                        <div className='col-12 showPassword mt-2'>
+                        <div className='col-12 showPassword'>
                             <input
                                 onClick={() => { this.handleShowHidePassword() }}
                                 type='checkbox'
@@ -128,14 +128,14 @@ class Login extends Component {
                         </div>
 
                         <div className='col-12'>
-                            <button ref={this.state.acceptBtnRef} className='btn-login mt-3' onClick={(e) => { this.handleLogin() }}>
+                            <button ref={this.state.acceptBtnRef} className='col-12 btn-login' onClick={(e) => { this.handleLogin() }}>
                                 Log In</button>
                         </div>
 
-                        <div className='col-12 mt-2'>
+                        <div className='col-12'>
                             <span className='forgot-password'>Forget Password</span>
                         </div>
-                        <div className='col-12 text-center mt-4'>
+                        <div className='col-12 text-center'>
                             <span className='text-social-login'> Or sign it with</span>
                         </div>
                         <div className='col-12 social-login'>

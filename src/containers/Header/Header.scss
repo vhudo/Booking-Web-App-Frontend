@@ -9,8 +9,18 @@
     height          : 40px;
     position        : relative;
 
+    i {
+
+        color      : white;
+        line-height: 40px;
+        height     : 40px;
+        padding    : 0 10px;
+    }
+
+
     .btn-logout {
         color      : $common-text-color;
+        display    : inline-flex;
         line-height: 40px;
         height     : 40px;
         padding    : 0 10px;

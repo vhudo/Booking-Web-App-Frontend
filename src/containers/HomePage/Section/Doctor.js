@@ -28,8 +28,9 @@ class Doctor extends Component {
     }
 
     render() {
-        // console.log('check props dortor top', this.props.topDoctors)
-        let { arrDoctors, language } = this.state;
+        let { arrDoctors } = this.state;
+        let { language } = this.props
+        console.log('check state', this.state)
 
         return (
             <div className="section-share section-doctor">
@@ -45,9 +46,7 @@ class Doctor extends Component {
                                 arrDoctors.map((item, index) => {
                                     let imageBase64 = "";
                                     if (item.image) {
-                                        imageBase64 = Buffer.from(item.image, "base64").toString(
-                                            "binary"
-                                        );
+                                        imageBase64 = Buffer.from(item.image, "base64").toString("binary");
                                     }
                                     let nameEn = `${item.firstName} ${item.lastName}, ${item.positionData.valueEn}`;
                                     let nameVi = `${item.lastName} ${item.firstName}, ${item.positionData.valueVi}`;
@@ -63,9 +62,8 @@ class Doctor extends Component {
                                                         ></div>
                                                     </div>
                                                     <div className="position text-center">
-                                                        <div> {language === LANGUAGES.VI ? nameVi : nameEn} </div>
-                                                        <div>Title</div>
-                                                        <div>Location</div>
+                                                        <div> {language === LANGUAGES.EN ? nameEn : nameVi} </div>
+                                                        <div>{item.Doctor_Info.Specialty.name ? item.Doctor_Info.Specialty.name : ''}</div>
 
                                                     </div>
                                                 </div>

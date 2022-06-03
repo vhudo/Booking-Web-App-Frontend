@@ -46,10 +46,8 @@
             "manage-posts": "Posts management"
         },
         "doctor":{
-            "manage-schedule": "Schedule management",
-            "choose-doctor": "Choose Doctor",
-        "choose-date": "Choose Date",
-        "save": "Save"
+            "manage-schedule": "Doctor Scheduler",
+            "manage-patient": "Patient Appointments"
         }
         
     },
@@ -74,11 +72,24 @@
         "more-info": "More",
         "specialty-top": "Top-searched specialties"
     },
+
     "manage-schedule":{
-        "title": "Doctor's Schedule Management",
+        "title": "Manage Doctor Schedule",
         "choose-doctor": "Choose Doctor",
         "choose-date": "Choose Date",
         "save": "Save"
+    },
+    "manage-patient":{
+        "title": "Patient Booking",
+        "choose-date": "Choose Date",
+        "confirm": "Confirm",
+        "no-data": "No Data",
+        "time": "Time",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "address": "Address",
+        "gender":"Gender",
+        "action": "Action"
     },
     "patient":{
         "detail-doctor":{

@@ -3,12 +3,10 @@
     height    : 100vh;
 
     .login-container {
-        margin       : auto;
-        max-width    : 500px;
-        min-width    : 300px;
-        max-height   : 700px;
-        width        : 30%;
-        height       : 75%;
+        margin: auto;
+
+        width        : calc(0.3 * 100vw + 10px);
+        height       : calc(0.55 * 100vh + 10px);
         border-radius: 20px;
         background   : white;
         position     : absolute;
@@ -23,49 +21,33 @@
             display       : flex;
             flex-direction: column;
             align-items   : center;
-            padding       : 1.5rem;
-            max-width     : 100%;
+            padding       : 27px 0px 28px 10px;
+            margin        : auto;
+            width         : 100%;
+
 
 
             .text-login {
                 text-align: center;
-                padding   : 2rem 0;
-                margin    : 0;
                 font-size : 2rem;
-            }
-
-            .showPassword {
-                font-size: 1.2rem;
             }
 
 
 
             .btn-login {
-                width        : 100%;
-                height       : 40px;
                 font-size    : 1.3rem;
                 color        : white;
-                font-weight  : 700;
-                border-radius: 25px;
+                font-weight  : 600;
+                border-radius: 2rem;
                 border       : none;
                 cursor       : pointer;
                 background   : linear-gradient(90deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
-            }
-
-            .forgot-password {
-                font-size: 1rem;
-
-            }
-
-            .text-center {
-                font-size: 1.3rem;
             }
 
             .social-login {
                 display        : flex;
                 justify-content: center;
                 align-items    : center;
-                margin-top     : 1rem;
 
                 i {
                     margin: 0 0.3rem;
@@ -106,8 +88,4 @@
             }
         }
     }
-
-
-
-
 }

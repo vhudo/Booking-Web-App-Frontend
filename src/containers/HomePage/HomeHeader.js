@@ -27,8 +27,9 @@ class HomeHeader extends Component {
                     <div className='home-header-content'>
                         <div className='left-content'>
 
-                            <i className="fas fa-bars"></i>
+                            {/* <i className="fas fa-bars"></i> */}
                             <Link to="/home">   <i className="fas fa-home" ></i></Link>
+                            <Link to="/Login"> <div className='log-in'>Log in</div></Link>
 
 
 

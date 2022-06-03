@@ -231,7 +231,9 @@ export const deleteUserFailure = () => ({
 export const fetchTopDoctor = () => {
   return async (dispatch, getState) => {
     try {
+      dispatch({ type: actionTypes.FETCH_TOP_DOCTOR_REQUEST });
       let res = await getTopDoctorHomeService("");
+      console.log('check res', res.data[0].Doctor_Info.Specialty)
       if (res && res.errCode === 0) {
         dispatch({
           type: actionTypes.FETCH_TOP_DOCTOR_SUCCESS,

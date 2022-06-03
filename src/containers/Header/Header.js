@@ -7,6 +7,7 @@ import './Header.scss';
 import { LANGUAGES, USER_ROLE } from '../../utils'
 import { FormattedMessage } from 'react-intl';
 import _ from 'lodash';
+import { Link } from "react-router-dom";
 
 class Header extends Component {
     constructor(props) {
@@ -51,6 +52,8 @@ class Header extends Component {
                 </div>
 
                 <div className='languages'>
+
+                    <Link to="/home">   <i className="fas fa-home" ></i></Link>
                     <span className='welcome'>
                         <FormattedMessage id="homeheader.welcome" />
                         {userInfo && userInfo.firstName ? userInfo.firstName : ''}
@@ -67,7 +70,7 @@ class Header extends Component {
                     </span>
 
                     {/* nút logout */}
-                    <div className="btn btn-logout" onClick={processLogout} title="Log Out">
+                    <div className="btn-logout" onClick={processLogout} title="Log Out">
                         <i className="fas fa-sign-out-alt"></i>
                     </div>
 
