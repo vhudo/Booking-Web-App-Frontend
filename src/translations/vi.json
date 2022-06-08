@@ -8,7 +8,8 @@
         "support": "Hỗ trợ",
         "welcome": "Xin chào, ",
         "title-1": "Nền tảng y tế",
-        "title-2": "chăm sóc sức khỏe toàn diện"
+        "title-2": "chăm sóc sức khỏe toàn diện",
+        "login": "Đăng nhập"
        
        
     },
@@ -93,7 +94,9 @@
     },
     "homepage":{
         "more-info": "Xem thêm",
-        "specialty-top": "Chuyên khoa phổ biến"
+        "specialty-top": "Chuyên khoa phổ biến",
+        "doctor-top": "Bác sĩ nổi bật",
+        "location": "Phòng khám"
     },
     "patient":{
         "detail-doctor":{

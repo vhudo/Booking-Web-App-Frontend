@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import './HomeFooter.scss';
+import { Link } from 'react-router-dom';
 
 class HomeFooter extends Component {
 
@@ -39,10 +40,11 @@ class HomeFooter extends Component {
                         <h5>Stay Healthy</h5>
 
                         <li>
-                            <a herf="/#"> Health Tips</a>
+                            Health Tips
                         </li>
                         <li>
-                            <a herf="/#"> Health News</a>
+                            Health News
+
                         </li>
                     </ul>
 
@@ -54,9 +56,7 @@ class HomeFooter extends Component {
                             <a herf="/#"> How it Works</a>
                         </li>
                         <li>
-                            <a herf="/#"> Sign Up</a>
-                            <span  > | </span>
-                            <a herf="/#"> Log In</a>
+                            <Link to="/login">  Log In</Link>
                         </li>
                         <li>
                             <a herf="/#"> Telemedicine</a>
@@ -69,7 +69,7 @@ class HomeFooter extends Component {
 
                         <p>&copy; 2022 VuHo. More Information
 
-                            <a target="_blank" herf="/#"> GitHub</a>
+                            <a target="_blank" herf="https://github.com/vhudo"> GitHub</a>
 
                         </p>
 

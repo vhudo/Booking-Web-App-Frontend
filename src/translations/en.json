@@ -8,7 +8,8 @@
         "support": "Support",
         "welcome": "Welcome, ",
         "title-1": "Meet With an Doctor",
-        "title-2": "Who Take Your Insurance"
+        "title-2": "Who Take Your Insurance",
+        "login": "Login"
        
     },
 
@@ -70,7 +71,9 @@
     },
     "homepage":{
         "more-info": "More",
-        "specialty-top": "Top-searched specialties"
+        "specialty-top": "Top-searched specialties",
+        "doctor-top": "Top-rated doctors",
+        "location": "Clinic"
     },
 
     "manage-schedule":{

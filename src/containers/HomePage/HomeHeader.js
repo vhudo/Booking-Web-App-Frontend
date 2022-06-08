@@ -29,7 +29,11 @@ class HomeHeader extends Component {
 
                             {/* <i className="fas fa-bars"></i> */}
                             <Link to="/home">   <i className="fas fa-home" ></i></Link>
-                            <Link to="/Login"> <div className='log-in'>Log in</div></Link>
+                            <Link to="/Login">
+                                <div className='log-in'>
+                                    <FormattedMessage id="homeheader.login" />
+                                </div>
+                            </Link>
 
 
 

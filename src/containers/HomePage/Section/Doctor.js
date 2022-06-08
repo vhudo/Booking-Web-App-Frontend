@@ -30,14 +30,14 @@ class Doctor extends Component {
     render() {
         let { arrDoctors } = this.state;
         let { language } = this.props
-        console.log('check state', this.state)
+        // console.log('check state', this.state)
 
         return (
             <div className="section-share section-doctor">
                 <div className="section-container">
                     <div className="section-header">
-                        <span className="title-section">Top-rated doctors</span>
-                        <button className="btn-section">More</button>
+                        <span className="title-section"> <FormattedMessage id="homepage.doctor-top" /></span>
+                        <button className="btn-section"> <FormattedMessage id="homepage.more-info" /></button>
                     </div>
                     <div className="section-body">
                         <Slider {...this.props.settings}>

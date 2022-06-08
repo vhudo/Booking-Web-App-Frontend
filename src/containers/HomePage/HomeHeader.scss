@@ -207,3 +207,60 @@
 
 
 }
+
+@media only screen and (max-width: 480px) {
+    .home-header-container {
+        padding: 5px;
+
+        .home-header-content {
+            .left-content {
+                width: 12%;
+
+                i {
+                    font-size    : 0.7rem;
+                    padding-right: 5px;
+                }
+
+                .log-in {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .center-content {
+                width          : 70%;
+                gap            : 7px;
+                justify-content: unset;
+
+                .child-content {
+                    font-size: 0.7rem;
+                }
+            }
+
+            .right-content {
+                width    : 18%;
+                font-size: 0.7rem;
+
+                .support {
+                    padding-right: unset;
+                }
+
+                .language-en {
+                    margin: 0 5px;
+                }
+
+                .language-vi {
+                    margin: 0 5px;
+                }
+            }
+
+
+        }
+    }
+
+    // .home-header-banner {
+    //     .content-up {}
+    // }
+
+
+
+}

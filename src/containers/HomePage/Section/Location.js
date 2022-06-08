@@ -35,7 +35,7 @@ class Location extends Component {
                 <div className='section-container'>
                     <div className='section-header'>
                         <span className='title-section'>
-                            <FormattedMessage id="homepage.specialty-top" />
+                            <FormattedMessage id="homepage.location" />
                         </span>
                         <button className='btn-section'>
                             <FormattedMessage id="homepage.more-info" />

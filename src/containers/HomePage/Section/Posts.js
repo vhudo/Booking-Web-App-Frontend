@@ -22,10 +22,7 @@ class Posts extends Component {
                                     <div className='img section-posts'></div>
                                 </div>
                                 <div className='position text-center'  >
-                                    <div>Posts Name, Position</div>
-                                    <div>Title</div>
-                                    <div>Location</div>
-
+                                    <div>Name</div>
                                 </div>
                             </div>
                             <div className='section-customize'>
@@ -33,10 +30,7 @@ class Posts extends Component {
                                     <div className='img section-posts'></div>
                                 </div>
                                 <div className='position text-center'  >
-                                    <div>Posts Name, Position</div>
-                                    <div>Title</div>
-                                    <div>Location</div>
-
+                                    <div>Name</div>
                                 </div>
                             </div>
                             <div className='section-customize'>
@@ -44,10 +38,7 @@ class Posts extends Component {
                                     <div className='img section-posts'></div>
                                 </div>
                                 <div className='position text-center'  >
-                                    <div>Posts Name, Position</div>
-                                    <div>Title</div>
-                                    <div>Location</div>
-
+                                    <div>Name</div>
                                 </div>
                             </div>
                             <div className='section-customize'>
@@ -55,10 +46,7 @@ class Posts extends Component {
                                     <div className='img section-posts'></div>
                                 </div>
                                 <div className='position text-center'  >
-                                    <div>Posts Name, Position</div>
-                                    <div>Title</div>
-                                    <div>Location</div>
-
+                                    <div>Name</div>
                                 </div>
                             </div>
                             <div className='section-customize'>
@@ -66,10 +54,7 @@ class Posts extends Component {
                                     <div className='img section-posts'></div>
                                 </div>
                                 <div className='position text-center'  >
-                                    <div>Posts Name, Position</div>
-                                    <div>Title</div>
-                                    <div>Location</div>
-
+                                    <div>Name</div>
                                 </div>
                             </div>
                             <div className='section-customize'>
@@ -77,10 +62,7 @@ class Posts extends Component {
                                     <div className='img section-posts'></div>
                                 </div>
                                 <div className='position text-center'  >
-                                    <div>Posts Name, Position</div>
-                                    <div>Title</div>
-                                    <div>Location</div>
-
+                                    <div>Name</div>
                                 </div>
                             </div>
                             <div className='section-customize'>
@@ -88,10 +70,7 @@ class Posts extends Component {
                                     <div className='img section-posts'></div>
                                 </div>
                                 <div className='position text-center'  >
-                                    <div>Posts Name, Position</div>
-                                    <div>Title</div>
-                                    <div>Location</div>
-
+                                    <div>Name</div>
                                 </div>
                             </div>
 

@@ -48,6 +48,7 @@
                 display        : flex;
                 justify-content: center;
                 align-items    : center;
+                margin-top     : 1rem;
 
                 i {
                     margin: 0 0.3rem;
@@ -88,4 +89,55 @@
             }
         }
     }
+
+    @media only screen and (max-width: 480px) {
+        .login-container {
+            width    : calc(0.8 * 100vw + 10px);
+            height   : calc(0.55 * 100vh + 10px);
+            font-size: 1.2rem;
+
+            .text-login {
+                font-size: 1.5rem;
+            }
+
+            input[type="checkbox"] {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    // @media only screen and (max-width: 820px) {
+    //     .login-container {
+    //         width    : calc(0.75 * 100vw + 10px);
+    //         height   : calc(0.55 * 100vh + 10px);
+    //         font-size: 1.8rem;
+    //         padding  : 27px 0px 28px 10px;
+
+
+    //         .text-login {
+    //             font-size: 3rem;
+    //         }
+
+    //         .form-control {
+    //             font-size: 1.8rem;
+
+    //         }
+
+    //         .text-center {
+    //             .text-social-login {
+    //                 font-size: 2.3rem;
+    //             }
+    //         }
+
+    //         .showPassword {
+    //             font-size: 1.8rem;
+
+    //             input[type="checkbox"] {
+
+    //                 margin-right: 1rem;
+    //             }
+    //         }
+    //     }
+    // }
+
 }

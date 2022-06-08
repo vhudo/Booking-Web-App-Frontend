@@ -97,7 +97,7 @@ class DoctorSchedule extends Component {
             let doctorId = this.props.doctorId
             let date = e.target.value
             let res = await getscheduleDoctorByDate(doctorId, date)
-            console.log('check res schedule', res)
+            // console.log('check res schedule', res)
             if (res && res.errCode === 0) {
                 this.setState({
                     allAvailabelTime: res.data ? res.data : []
